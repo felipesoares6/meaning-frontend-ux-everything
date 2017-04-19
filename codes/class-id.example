@@ -1,0 +1,7 @@
+.class {
+  color: #fff;
+}
+
+#id {
+  color: #fff;
+}

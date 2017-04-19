@@ -1,0 +1,1 @@
+const initialText = document.querySelector("[data-initial-text]");

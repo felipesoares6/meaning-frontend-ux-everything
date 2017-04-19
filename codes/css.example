@@ -1,0 +1,7 @@
+p {
+ color: #fff;
+}
+
+.class p {
+  color: #000;
+}

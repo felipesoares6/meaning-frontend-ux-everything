@@ -1,0 +1,81 @@
+html
+  hipertexto
+  marcacao
+  semantica
+  evitar divs
+  w3c
+css
+  estilo em cascata
+  use classes nao ids
+  style guides
+  frameworks
+  pre-processadores
+  muitas animacoes podem ser feitas sem js
+javascript
+  a lingaguem universal da web
+  jquery
+    quase tudo aqui pode ser feito com js puro
+    CDN
+  es6
+  use data-attributes
+
+  ferramentas
+  bower
+  gulp
+  NPM, Yarn
+
+  frameworks javascript
+  angular
+  react
+  vue
+
+  so usar um quando necessario
+  vale a pena?
+  qual o tamanho da aplicacao?
+  como isso vai impactar a performance?
+
+web mobile
+  mobile first
+  web responsivo
+  media queries
+  viewport
+
+  GANCHO PARA USABILIDADE NO MOBILE
+    experienca do usuario, em relacao a performance, tempo de resposta
+    qualidade do codigo e formas de estilizar melhor sua aplicacao
+
+
+  Ta mas e a experienca do usuario?
+
+  intro do que e ux
+    ux fora de ti, ux em tudo ao seu redor
+    mostrar pontos que ligam o front end a usabilidade e experiencia do usuario
+    a importancia do pensamento focado na experiencia do usuario desde a escrita do html
+
+
+  o menor design e o melhor design
+
+    guidelines
+      sempre mostre onde o usuario esta
+      permita voltar caso algo deu errado
+      preveja erros
+      mensagens claras do mundo real para o usuario
+      manter o padrao da interface
+      feedback imediato
+      hierarquia de elementos
+      botao adicionar longe do botao excluir
+
+
+    como prototipar
+      rabiscar no papel
+      rabiscar no papel
+      calma, rabisca mais um pouco
+      defina o fluxo de telas
+      xd, photoshop, marvel
+      protipos navegaveis
+      escolha uma paleta de cores daora
+        abode colors
+      escolha fontes daoras
+        google fonts
+
+  comunidades
