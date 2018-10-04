@@ -1,0 +1,10 @@
+$primary-color: #fff;
+
+.class {
+  color: $primary-color;
+
+  #id {
+    color: $primary-color;
+  }
+}
+

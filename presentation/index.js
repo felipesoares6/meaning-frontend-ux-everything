@@ -7,8 +7,6 @@ import {
   Cite,
   Deck,
   Heading,
-  ListItem,
-  List,
   Quote,
   Slide,
   Image,
@@ -68,7 +66,7 @@ const gifs = {
   lessIsMore: require("../assets/lessismore.gif"),
   error: require("../assets/error.gif"),
   community: require("../assets/community.gif")
-}
+};
 
 const codes = {
   mediaQueries: require("raw-loader!../codes/media-queries.example"),
@@ -77,8 +75,11 @@ const codes = {
   dataHtml: require("raw-loader!../codes/data-attr-html.example"),
   dataJs: require("raw-loader!../codes/data-attr-js.example"),
   html: require("raw-loader!../codes/html.example"),
-  css: require("raw-loader!../codes/css.example")
-}
+  css: require("raw-loader!../codes/css.example"),
+  sass: require("raw-loader!../codes/sass.example"),
+  buttonJs: require("raw-loader!../codes/button-js.example"),
+  eventButtonJs: require("raw-loader!../codes/event-button-js.example")
+};
 
 preloader(images);
 preloader(gifs);
@@ -166,7 +167,7 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={3} fit caps lineHeight={1} textColor="secondary">
-            The meaning of life
+            The meaning of
           </Heading>
           <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
             front-end
@@ -175,7 +176,7 @@ export default class Presentation extends React.Component {
             user experience
           </Heading>
           <Heading size={3} fit caps lineHeight={1} textColor="secondary">
-            and everything
+            & everything
           </Heading>
           <Text margin="20px 0 0" textColor="tertiary">
             felipe soares
@@ -199,7 +200,6 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Image src={images.code} style={styles.codeLogo}></Image>
-          <Heading size={5}> we are hiring </Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
@@ -274,17 +274,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={4} textColor="primary"> style guides</Heading>
-        </Slide>
-
-        <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary"> CSS preprocessors</Heading>
           <Image src={images.sass} style={ styles.frontendImgs }></Image>
           <Image src={images.less} style={ styles.frontendImgs }></Image>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={4} textColor="primary"> you might not need js</Heading>
+          <Heading size={4} textColor="primary">SASS</Heading>
+          <CodePane style={styles.marginTop} textSize="26px" lang="css" source={codes.sass} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
@@ -301,6 +298,16 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={4} textColor="primary"> listen to events </Heading>
+          <CodePane style={styles.marginTop} textSize="22px"
+            lang="js" source={codes.buttonJs}>
+          </CodePane>
+          <CodePane style={styles.marginTop} textSize="22px"
+            lang="js" source={codes.eventButtonJs}>
+          </CodePane>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary"> use data-attributes </Heading>
           <CodePane style={styles.marginTop} textSize="22px"
             lang="html" source={codes.dataHtml}>
@@ -308,6 +315,10 @@ export default class Presentation extends React.Component {
           <CodePane style={styles.marginTop} textSize="22px"
             lang="js" source={codes.dataJs}>
           </CodePane>
+        </Slide>
+
+        <Slide transition={["fade"]} bgColor="tertiary">
+          <Heading size={4} textColor="primary"> you might not need js</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -367,12 +378,6 @@ export default class Presentation extends React.Component {
               <Image src={images.yarn} style={styles.frontendImgs}></Image>
               <Text textColor="tertiary">
                 yarn
-              </Text>
-            </Layout>
-            <Layout style={styles.flexItem}>
-              <Image src={images.bower} style={styles.frontendImgs}></Image>
-              <Text textColor="tertiary">
-                bower
               </Text>
             </Layout>
           </Layout>
@@ -528,10 +533,6 @@ export default class Presentation extends React.Component {
               <Link style={styles.communityItem}>www.meetup.com/pt-BR/Grupy-SP/</Link>
             </Layout>
             <Layout style={styles.contact}>
-              <Text style={styles.communityTitle}>integrado</Text>
-              <Link style={styles.communityItem}>www.meetup.com/pt-BR/In-Tegra-Do/</Link>
-            </Layout>
-            <Layout style={styles.contact}>
               <Text style={styles.communityTitle}>semana da tecnologia fatec</Text>
               <Link style={styles.communityItem}>fatecsorocaba.github.io/semana-da-tecnologia/</Link>
             </Layout>
@@ -544,18 +545,22 @@ export default class Presentation extends React.Component {
               <Link style={styles.communityItem}>www.meetup.com/pt-BR/Sorocaba-Node-User-Group-SNUG/</Link>
             </Layout>
             <Layout style={styles.contact}>
-              <Text style={styles.communityTitle}>english meetup</Text>
-              <Link style={styles.communityItem}>www.meetup.com/pt-BR/Sorocaba-English-Conversation-Happy-Hours/</Link>
-            </Layout>
-            <Layout style={styles.contact}>
               <Text style={styles.communityTitle}>gdg sorocaba</Text>
               <Link style={styles.communityItem}>www.meetup.com/pt-BR/GDG-Sorocaba/</Link>
             </Layout>
           </Layout>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={4} textColor="primary">thanks</Heading>
+        <Slide transition={["fade"]} bgColor="primary">
+          <Heading size={4} textColor="tertiary">thanks</Heading>
+          <Layout style={styles.contactInfo}>
+            <Image src={images.github} style={styles.contactImg}></Image>
+            <Text style={styles.contactItem}> github.com/felipesoares6</Text>
+          </Layout>
+          <Layout style={styles.contactInfo}>
+            <Image src={images.twitter} style={styles.contactImg}></Image>
+            <Text style={styles.contactItem}> @felipesoares6_</Text>
+          </Layout>
         </Slide>
       </Deck>
     );

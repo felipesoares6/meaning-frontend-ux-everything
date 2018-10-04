@@ -1,0 +1,5 @@
+const button = document.querySelector("[data-button]");
+
+const handleButtonClick = () => {
+  alert('consciência no voto!')
+};
