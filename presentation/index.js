@@ -96,30 +96,30 @@ const theme = createTheme({
 
 const styles = {
   frontendImgs: {
-    marginLeft: '30px',
-    marginRight: '30px',
-    marginBottom: '10px',
-    width: '250px',
-    height: '250px'
+    marginLeft: "30px",
+    marginRight: "30px",
+    marginBottom: "10px",
+    width: "250px",
+    height: "250px"
   },
   aboutImgs: {
-    height: '200px'
+    height: "200px"
   },
   headImgs: {
-    height: '300px',
-    marginTop: '20px'
+    height: "300px",
+    marginTop: "20px"
   },
   marginTop: {
-    marginTop: '40px'
+    marginTop: "40px"
   },
   contactInfo: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
     marginTop: 30
   },
   contact: {
     flex: 1,
-    textAlign: 'left',
+    textAlign: "left",
     marginTop: 30
   },
   contactImg: {
@@ -136,8 +136,8 @@ const styles = {
   },
   community: {
     flex: 1,
-    flexDirection: 'column',
-    textAlign: 'left',
+    flexDirection: "column",
+    textAlign: "left"
   },
   communityItem: {
     marginLeft: 5,
@@ -148,18 +148,18 @@ const styles = {
     marginLeft: 5,
     marginRight: 5,
     fontSize: 20,
-    color: '#fff'
+    color: "#fff"
   },
   flex: {
     flex: 1
   },
   flexItem: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
   }
-}
+};
 
 export default class Presentation extends React.Component {
   render() {
@@ -184,71 +184,79 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Image src={images.me} width={280} height={280}></Image>
+          <Image src={images.me} width={280} height={280} />
           <Heading size={5} lineHeight={1} textColor="secondary">
             Felipe Luiz Soares
           </Heading>
           <Layout style={styles.contactInfo}>
-            <Image src={images.github} style={styles.contactImg}></Image>
+            <Image src={images.github} style={styles.contactImg} />
             <Text style={styles.contactItem}> github.com/felipesoares6</Text>
           </Layout>
           <Layout style={styles.contactInfo}>
-            <Image src={images.twitter} style={styles.contactImg}></Image>
+            <Image src={images.twitter} style={styles.contactImg} />
             <Text style={styles.contactItem}> @felipesoares6_</Text>
           </Layout>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Image src={images.code} style={styles.codeLogo}></Image>
+          <Image src={images.code} style={styles.codeLogo} />
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Image src={gifs.meaning} width={800} height={500}></Image>
+        <Slide transition={["fade"]} bgColor="primary" notes="
+          <p>nao sei o que fazer da minha vida</p>
+          <p>nao estou me encontrando na faculdade</p>
+          <p> experiencia pessoal</p>"
+        >
+          <Image src={gifs.meaning} width={800} height={500} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary" notes="
           <p>pq aprender front-end</p>
           <p>nao ter front end na faculdade</p>
           <p>uma area enorme de tecnologia</p>
-          <p>cada vez mais procura e importância</p>">
+          <p>cada vez mais procura e importância</p>"
+        >
           <Heading size={4} textColor="primary">front-end</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary" notes="
           <p>pq aprender experiência do usuário</p>
           <p>entender quem usa os produtos</p>
-          <p>procurar anteder da melhor forma possivel nosso cliente/usuario</p>">
+          <p>procurar anteder da melhor forma possivel nosso cliente/usuario</p>"
+        >
           <Heading size={4} textColor="primary">user experience</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Image src={images.html} style={styles.frontendImgs}></Image>
-          <Image src={images.css} style={styles.frontendImgs}></Image>
-          <Image src={images.js} style={styles.frontendImgs}></Image>
+          <Image src={images.html} style={styles.frontendImgs} />
+          <Image src={images.css} style={styles.frontendImgs} />
+          <Image src={images.js} style={styles.frontendImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
-          <Image src={gifs.no} width={800} height={500}></Image>
+          <Image src={gifs.no} width={800} height={500} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" notes="
           <p>criado em 1991</p>
-          <p>html 5 2008</p>">
+          <p>html 5 2008</p>"
+        >
           <Heading size={2} textColor="#e34c26">HTML</Heading>
-          <Image src={gifs.html} style={styles.headImgs}></Image>
+          <Image src={gifs.html} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary" notes="
           <p>navegacao entre paginas através de links</p>
-          <p>contar a história da ancora, navegadores</p>">
+          <p>contar a história da ancora, navegadores</p>"
+        >
           <Heading size={4} textColor="primary">hypertext</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">markup</Heading>
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="html" source={codes.html}>
-          </CodePane>
+            lang="html" source={codes.html}
+          />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -257,26 +265,25 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="tertiary">CSS</Heading>
-          <Image src={gifs.css} style={styles.headImgs}></Image>
+          <Image src={gifs.css} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">cascading style</Heading>
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="css" source={codes.css}>
-          </CodePane>
+            lang="css" source={codes.css}
+          />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">prefer classes over id's</Heading>
-          <CodePane style={styles.marginTop} textSize="26px" lang="css" source={codes.classId}>
-          </CodePane>
+          <CodePane style={styles.marginTop} textSize="26px" lang="css" source={codes.classId} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary"> CSS preprocessors</Heading>
-          <Image src={images.sass} style={ styles.frontendImgs }></Image>
-          <Image src={images.less} style={ styles.frontendImgs }></Image>
+          <Image src={images.sass} style={ styles.frontendImgs } />
+          <Image src={images.less} style={ styles.frontendImgs } />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -286,7 +293,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="#fff90d">JS</Heading>
-          <Image src={gifs.js} style={styles.headImgs}></Image>
+          <Image src={gifs.js} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -300,21 +307,21 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary"> listen to events </Heading>
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="js" source={codes.buttonJs}>
-          </CodePane>
+            lang="js" source={codes.buttonJs}
+          />
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="js" source={codes.eventButtonJs}>
-          </CodePane>
+            lang="js" source={codes.eventButtonJs}
+          />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary"> use data-attributes </Heading>
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="html" source={codes.dataHtml}>
-          </CodePane>
+            lang="html" source={codes.dataHtml}
+          />
           <CodePane style={styles.marginTop} textSize="22px"
-            lang="js" source={codes.dataJs}>
-          </CodePane>
+            lang="js" source={codes.dataJs}
+          />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -337,22 +344,23 @@ export default class Presentation extends React.Component {
           notes="<p>vale a pena?</p>
           <p>qual o tamanho da aplicação?</p>
           <p>como isso vai impactar a performance?</p>
-          <p>view react angular ember inferno</p>">
+          <p>view react angular ember inferno</p>"
+        >
           <Layout style={styles.flex}>
             <Layout style={styles.flexItem}>
-              <Image src={images.vue} style={styles.frontendImgs}></Image>
+              <Image src={images.vue} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 vue
               </Text>
             </Layout>
             <Layout style={styles.flexItem}>
-              <Image src={images.react} style={styles.frontendImgs}></Image>
+              <Image src={images.react} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 react
               </Text>
             </Layout>
             <Layout style={styles.flexItem}>
-              <Image src={images.angular} style={styles.frontendImgs}></Image>
+              <Image src={images.angular} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 angular
               </Text>
@@ -360,22 +368,29 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Image src={images.html} style={styles.frontendImgs} />
+          <Image src={images.css} style={styles.frontendImgs} />
+          <Image src={images.js} style={styles.frontendImgs} />
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="tertiary">tools</Heading>
-          <Image src={gifs.tools} style={styles.headImgs}></Image>
+          <Image src={gifs.tools} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary"
-          notes="<p>package manager</p>">
+          notes="<p>package manager</p>"
+        >
           <Layout style={styles.flex}>
             <Layout style={styles.flexItem}>
-              <Image src={images.npm} style={styles.frontendImgs}></Image>
+              <Image src={images.npm} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 npm
               </Text>
             </Layout>
             <Layout style={styles.flexItem}>
-              <Image src={images.yarn} style={styles.frontendImgs}></Image>
+              <Image src={images.yarn} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 yarn
               </Text>
@@ -384,16 +399,17 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary"
-          notes="<p>task manager</p>">
+          notes="<p>task manager</p>"
+        >
           <Layout style={styles.flex}>
             <Layout style={styles.flexItem}>
-                <Image src={images.gulp} style={styles.frontendImgs}></Image>
+                <Image src={images.gulp} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 gulp
               </Text>
             </Layout>
             <Layout style={styles.flexItem}>
-              <Image src={images.grunt} style={styles.frontendImgs}></Image>
+              <Image src={images.grunt} style={styles.frontendImgs} />
               <Text textColor="tertiary">
                 grunt
               </Text>
@@ -404,16 +420,17 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary"
           notes="<p>bundler</p>
                 <p>webpack</p>
-                <p>rollup</p>">
+                <p>rollup</p>"
+        >
             <Layout style={styles.flex}>
               <Layout style={styles.flexItem}>
-                <Image src={images.webpack} style={styles.frontendImgs}></Image>
+                <Image src={images.webpack} style={styles.frontendImgs} />
                 <Text textColor="tertiary">
                   webpack
                 </Text>
               </Layout>
               <Layout style={styles.flexItem}>
-                <Image src={images.rollup} style={styles.frontendImgs}></Image>
+                <Image src={images.rollup} style={styles.frontendImgs} />
                 <Text textColor="tertiary">
                   rollup
                 </Text>
@@ -422,13 +439,14 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary"
-          notes="<p>transpiler</p>">
-          <Image src={images.babel} style={styles.frontendImgs}></Image>
+          notes="<p>transpiler</p>"
+        >
+          <Image src={images.babel} style={styles.frontendImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={2} textColor="tertiary">web mobile</Heading>
-          <Image src={gifs.mobile} style={styles.headImgs}></Image>
+          <Image src={gifs.mobile} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -445,50 +463,56 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">media queries</Heading>
-          <CodePane style={styles.marginTop} textSize="26px" lang="css" source={codes.mediaQueries}>
-          </CodePane>
+          <CodePane style={styles.marginTop} textSize="26px" lang="css" source={codes.mediaQueries} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
           notes="<p>ux fora de ti</p>
                 <p>front end e usabilidade</p>
-                <p>velocidade da aplicação link com html, js, frameworks</p>">
+                <p>velocidade da aplicação link com html, js, frameworks</p>"
+        >
           <Heading size={4} textColor="primary">user experience</Heading>
-          <Image src={gifs.ux} style={styles.headImgs}></Image>
+          <Image src={gifs.ux} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
           notes="<p>Jabok Nielsen</p>
-          <p>são 10</p>">
+          <p>são 10</p>"
+        >
           <Heading size={4} textColor="primary">heuristics for user interface</Heading>
-          <Image src={gifs.approves} style={styles.headImgs}></Image>
+          <Image src={gifs.approves} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
           notes="<p>mantenha o usuário informado sobre o que esta acontecendo no sistema</p>
-          <p>exemplo da foto upload</p>">
+          <p>exemplo da foto upload</p>"
+        >
           <Heading size={4} textColor="primary">visibility of system status</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
-          note="fale a linguagem do usuário">
+          note="fale a linguagem do usuário"
+        >
           <Heading size={4} textColor="primary">match between system and the real world</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
-          notes="permita uma saída de emergência">
+          notes="permita uma saída de emergência"
+        >
           <Heading size={4} textColor="primary">user control and freedom</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
-          notes="use padrões para não confudir o usuário">
+          notes="use padrões para não confudir o usuário"
+        >
           <Heading size={4} textColor="primary">consistency and standards</Heading>
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary"
-          notes="previna erros ao invés de boas mensagens de erro">
+          notes="previna erros ao invés de boas mensagens de erro"
+        >
           <Heading size={4} textColor="primary">error prevention</Heading>
-          <Image src={gifs.error} style={styles.headImgs}></Image>
+          <Image src={gifs.error} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -497,12 +521,13 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">less is more</Heading>
-          <Image src={gifs.lessIsMore} style={styles.headImgs}></Image>
+          <Image src={gifs.lessIsMore} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]}
           notes="<p>brad fros</p>
-          <p>o que importa é a INTERFACE e a experiência que o usuário vai ter</p>">
+          <p>o que importa é a INTERFACE e a experiência que o usuário vai ter</p>"
+        >
           <BlockQuote>
             <Quote textSize="56px" textColor="quartenary">
               Users don’t care if React is powering this feature while Angular is powering another.
@@ -515,7 +540,7 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={4} textColor="primary">communities</Heading>
-          <Image src={gifs.community} style={styles.headImgs}></Image>
+          <Image src={gifs.community} style={styles.headImgs} />
         </Slide>
 
         <Slide transition={["fade"]} bgColor="tertiary">
@@ -554,11 +579,11 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary">
           <Heading size={4} textColor="tertiary">thanks</Heading>
           <Layout style={styles.contactInfo}>
-            <Image src={images.github} style={styles.contactImg}></Image>
+            <Image src={images.github} style={styles.contactImg} />
             <Text style={styles.contactItem}> github.com/felipesoares6</Text>
           </Layout>
           <Layout style={styles.contactInfo}>
-            <Image src={images.twitter} style={styles.contactImg}></Image>
+            <Image src={images.twitter} style={styles.contactImg} />
             <Text style={styles.contactItem}> @felipesoares6_</Text>
           </Layout>
         </Slide>
